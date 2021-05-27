@@ -1,0 +1,20 @@
+package javaMiddleClass.javaStudy.thread;
+
+public class JoinExam {
+
+	public static void main(String[] args) {
+		MyThread5 thread = new MyThread5();
+		thread.start();
+		
+		System.out.println("시작");
+		
+		try {
+			thread.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("종료"); //join이 끝나야 실행됨
+	}
+
+}
